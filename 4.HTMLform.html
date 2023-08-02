@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>HTML form</title>
+	</head>
+
+	<body>
+		<form>
+			<fieldset>
+				<legend>Personal Details</legend>
+			<label>First name : </label><input placeholder="Enter first name" type="text"><br/><br/> <!-- placeholder tag is used to give sugguetions or samples -->
+			<label>Last name : </label><input type="text"><br/><br/>
+			<label>Registration No <sup>*</sup> : </label><input type="text" value="2001"  required ><br/><br/> <!-- value tag is used to show default values/ required means, must add-->
+			<label>NIC no : </label><input type="text" required/><br/><br/>
+			<label>Address :</label><textarea placeholder="ex - no 221,Street, Colombo"></textarea><br/><br/> <!-- if we need to add a default value in a textarea it should be added inbetween "textarea" tags. But we can add a sample using "placeholder" in "textarea" tag   -->
+			<label>Descriptions :</label><textarea>Your feedbacks</textarea><br/><br/>
+			<label>Gender :</label>
+				<select size="2" multiple> <!-- no of options are showed by size and allowed to select multiples by "multiple" attribute -->
+					<option>Male</option>
+					<option selected>Female</option> <!-- we can set default value using selected atribute -->
+					<option>Other</option>
+				</select><br/><br/>
+			<label>Gender :</label>
+					<input type="radio" name="gender">Male
+					<input type="radio" name="gender">Female
+					<input type="radio" name="gender">Other
+			</fieldset>
+
+			<fieldset>
+				<legend>Contact detatils</legend>
+				<label>Phone Number :</label><input type="tel"/><br/><br/>
+				<label>E-mail :</label> <input type="email" /><br/><br/>
+				<label>Emergency contact Number :</label><input type="tel"/><br/><br/>
+			</fieldset>
+
+			<fieldset>
+				<legend>Education qualifications</legend>
+				<label>Highest educational qualification :</label>
+				<select>
+					<optgroup label="GCE"><!-- to create a content group "optgroup" tag is used, here "label" should be included in optgroup tag-->
+						<option>O/L</option>
+						<option>A/L</option>
+					</optgroup>
+					<optgroup label="Graduation">
+						<option>Diploma</option>
+						<option>Higher Diploma</option>
+						<option>Degree</option>
+					</optgroup>
+				</select>
+			</fieldset>
+
+			<fieldset> <!-- this method is use to choose same letter items -->
+				<legend>Courses</legend>
+					<label>Chose favorits</label>
+					<input list="Sel_best" id="fav">
+
+					<datalist id="Sel_best">
+						<option>Web development</option>
+						<option>Database</option>
+						<option>Software Eng:</option>
+						<option>Web 2</option>
+						<option>Data analysing</option>
+					</datalist>
+
+			</fieldset>
+			<fieldset>
+				<legend>Courses 2</legend>
+					<input type="checkbox" checked />Web development
+					<input type="checkbox"/>Database
+					<input type="checkbox" />Software Engineering
+
+			</fieldset>
+			<input type="submit" /> <!-- add submit button, else we can use button tag  -->
+			<input type="submit" value="send">
+			<button type="submit">Upload</button><!-- add reset button, else we can use button tag  --><br/><br/>
+			<input type="reset"/>
+			<button type="reset">Clear</button>
+		</form>
+
+	</body>
+</html>
